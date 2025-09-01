@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  node-app:
+    build: .
+    image: typescript-starter
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/typescript_starter_db?schema=public
+      - NODE_ENV=development
+      - JWT_SECRET=docker-development-secret-key
+      - PORT=3000
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    volumes:
+      - .:/usr/src/node-app
+      - /usr/src/node-app/node_modules
+    networks:
+      - app-network
+    command: npm run dev
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=typescript_starter_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge

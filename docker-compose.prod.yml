@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  node-app:
+    container_name: typescript-starter-prod
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/typescript_starter_prod?schema=public
+    command: npm run start
+    volumes: []  # No volume mounts in production
+    
+  postgres:
+    environment:
+      - POSTGRES_DB=typescript_starter_prod

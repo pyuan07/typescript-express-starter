@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  node-app:
+    container_name: typescript-starter-dev
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/typescript_starter_dev?schema=public
+    command: npm run dev
+    volumes:
+      - .:/usr/src/node-app
+      - /usr/src/node-app/node_modules
+    
+  postgres:
+    environment:
+      - POSTGRES_DB=typescript_starter_dev

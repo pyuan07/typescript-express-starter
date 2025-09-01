@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+
+# Build output
+dist/
+
+# yarn error logs
+yarn-error.log
+npm-debug.log*
+
+# Environment variables
+.env*
+!.env*.example
+
+# Code coverage
+coverage
+*.lcov
+
+# Test results
+test-results/
+junit.xml
+
+# Logs
+logs/*.log
+*.log
+
+# PM2
+.pm2
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prisma
+/generated/prisma
+
+# Claude
+/CLAUDE.md
+.claude

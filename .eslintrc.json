@@ -1,0 +1,61 @@
+{
+  "env": {
+    "node": true,
+    "es2020": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base", 
+    "plugin:@typescript-eslint/recommended",
+    "plugin:security/recommended", 
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "security", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    "coverage/",
+    "tests/",
+    "jest.config.js",
+    "scripts/",
+    "prisma/",
+    "src/config/database.test.ts"
+  ],
+  "rules": {
+    "no-console": "off",
+    "func-names": "off",
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "security/detect-object-injection": "off",
+    "security/detect-non-literal-regexp": "off",
+    "import/extensions": ["error", "ignorePackages", {
+      "ts": "never"
+    }],
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-restricted-syntax": "off",
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "object-shorthand": "off",
+    "prefer-template": "off",
+    "no-useless-escape": "off",
+    "no-await-in-loop": "off",
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
