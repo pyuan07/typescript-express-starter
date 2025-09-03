@@ -563,6 +563,18 @@ Once you have the starter running, consider exploring:
 
 ---
 
+## Attribution
+
+This project is built upon and inspired by [hagopj13/node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate), which provided the foundational architecture and patterns. We've enhanced it with modern technologies including:
+
+- **TypeScript**: Full type safety and modern JavaScript features
+- **PostgreSQL + Prisma**: Type-safe database operations instead of MongoDB + Mongoose  
+- **Zod Validation**: Runtime schema validation with type inference
+- **Enhanced Security**: Updated security practices and dependencies
+- **Modern Development Tools**: Latest versions of ESLint, Prettier, and testing frameworks
+
+Special thanks to [Hagop Jamkojian](https://github.com/hagopj13) for creating the excellent foundation that made this starter possible.
+
 ## License
 
 [MIT](LICENSE)

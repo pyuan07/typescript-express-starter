@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs';
 import prisma from '../config/database';
 import ApiError from '../utils/ApiError';
 import { FilterObject } from '../types/auth.types';
+import { QueryOptions, QueryResult } from '../types/pagination.types';
 import { validatePagination, validateSort, isValidEmail, isValidUuid } from '../utils/validation';
 
 interface CreateUserData {
@@ -20,20 +21,6 @@ interface UpdateUserData {
   password?: string;
   role?: 'USER' | 'ADMIN';
   isEmailVerified?: boolean;
-}
-
-interface QueryOptions {
-  sortBy?: string;
-  limit?: string | number;
-  page?: string | number;
-}
-
-interface QueryResult<T> {
-  results: T[];
-  page: number;
-  limit: number;
-  totalPages: number;
-  totalResults: number;
 }
 
 /**

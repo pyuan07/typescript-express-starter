@@ -1,11 +1,11 @@
 {
-  "name": "create-nodejs-express-app",
+  "name": "typescript-express-starter",
   "version": "1.7.0",
-  "description": "Create a Node.js app for building production-ready RESTful APIs using Express, by running one command",
+  "description": "A modern TypeScript starter for building production-ready RESTful APIs using Express, PostgreSQL, and Prisma",
   "bin": "bin/createNodejsApp.js",
   "main": "dist/index.js",
-  "repository": "https://github.com/hagopj13/node-express-boilerplate.git",
-  "author": "Hagop Jamkojian <hagopj13@gmail.com>",
+  "repository": "https://github.com/your-username/typescript-express-starter.git",
+  "author": "Your Name <your.email@example.com>",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
